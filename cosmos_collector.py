@@ -39,8 +39,8 @@ class CustomExporter:
 
     def main(self):
         start_http_server(self.port)
-        block = self.get_block()
         while True:
+            block = self.get_block()
             self.set_metrics(block["block"]["header"])
             time.sleep(1)
 
